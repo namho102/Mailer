@@ -1,0 +1,17 @@
+{
+    "service": "Hotmail",
+    "name": "Hoang Nam",
+    "email": "wwwlewis@outlook.com",
+    "username": "wwwlewis@outlook.com",
+    "password": "PKZ4yYEy",
+    "imap": {
+        "host": "imap-mail.outlook.com",
+        "port": 993,
+        "secure": true
+    },
+    "smtp": {
+        "host": "smtp-mail.outlook.com",
+        "port": 25,
+        "ssl": true
+    }
+}

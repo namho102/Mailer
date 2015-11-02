@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Simple Mailer</title>
+    <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
+    <script src="semantic/dist/jquery.min.js"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+    
+    <script src="https://code.angularjs.org/1.4.5/angular.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body ng-app='mailer'>
+    <div id="container">
+        <div class="ui grid">
+            <div class="two wide column"></div>
+            <div class="eight wide column">
+                <div class="ui very padded container segment">
+                    <h1 class="ui header">
+                        <i class="mail icon"></i>
+                        <p class="content">Mailer In Node.JS</p>
+                    </h1>
+                    <!-- mail form -->
+                    <form class="ui form" ng-controller='MailController'>
+                        <div class="field">
+                            <!-- <label>To</label> -->
+                            <input id="to" type="text" placeholder="To" ng-model="mail.to" />
+                        </div>
+                        <div class="field">
+                            <!-- <label>Subject</label> -->
+                            <input id="subject" type="text" placeholder="Subject" ng-model="mail.subject"/>
+                        </div>
+                        <div class="field">
+                            <textarea id="content" rows="8" placeholder="Write what you want to send" ng-model="mail.text"></textarea>
+                        </div>
+                        <div class="field">
+                            <span id="message"></span>
+                        </div>
+                        <button class="ui primary button" id="send_email" ng-click="sendMail()">Send Email</button>
+                    
+                        <!-- <p>{{to}} {{subject}} {{content}}</p> -->
+                    </form>
+                    <!-- end mail form -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
