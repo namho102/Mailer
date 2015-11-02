@@ -105,10 +105,6 @@ mailListener.on("error", function(err) {
 });
 
 mailListener.on("mail", function(mail) {
-    // console.log(mail.subject);
-    // console.log(mail.from);
-    // console.log(mail.date);
-    // console.log(mail.text);
     var newMail = Mail({
         from: mail.from,
         subject: mail.subject,
@@ -129,7 +125,6 @@ mailListener.on("attachment", function(attachment) {
 });
 
 app.get('/mails', function(req, res, next) {
-    // imapStart();
     var msg = {};
 
     Mail.find({}, function(err, mails) {
@@ -140,7 +135,6 @@ app.get('/mails', function(req, res, next) {
     });
 })
 
-
 app.get('/mails/:id', function(req, res, next) {
     var id = req.params.id;
     Mail.findOne({_id: id}, function(err, mail) {
@@ -148,9 +142,6 @@ app.get('/mails/:id', function(req, res, next) {
         res.send(mail);
     });
 })
-
-
-
 
 app.listen(8888, function() {
     console.log("Express Started on Port 8888");
