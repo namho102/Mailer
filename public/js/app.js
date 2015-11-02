@@ -1,7 +1,7 @@
 var  app = angular.module('mailer', []);
 
 app.controller('MailController', ['$scope', '$http', function($scope, $http) {
-	$scope.mail = {'from': 'wwwlewis@outlook.com'};
+	$scope.mail = {'from': 'YOUR EMAIL'};
 
 	$scope.sendMail = function() {
 		// console.log($scope.mail);
@@ -11,7 +11,7 @@ app.controller('MailController', ['$scope', '$http', function($scope, $http) {
                 if(response.data == 'success') {
                     console.log('mail is sent successfully');
                     $scope.mail = null;
-                    $scope.mail = {'from': 'wwwlewis@outlook.com'};
+                    $scope.mail = {'from': 'YOUR EMAIL'};
                 }
             }, function(err) {
                 console.log('error: ' + err);
